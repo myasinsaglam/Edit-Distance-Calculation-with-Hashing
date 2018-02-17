@@ -2,7 +2,7 @@
 @file
 
 Bu uygulamada verilen sozlukteki kelimeler Hashing yontemiyle bir listede saklanmistir.
-Test olarak verilen kelimelerden yazim hatali olanlara Levenshtein Distance mesafesi ile benzer doðru kelimeler bulunup yazým duzeltme onerisi detayli olarak gerceklestirilmistir.
+Test olarak verilen kelimelerden yazim hatali olanlara Levenshtein Distance mesafesi ile benzer doÄŸru kelimeler bulunup yazÄ±m duzeltme onerisi detayli olarak gerceklestirilmistir.
 Sonuclar ise dosyaya kaydedilmistir.
 @author
 
@@ -30,7 +30,7 @@ Operating System :		Windows 10 Educational Edition
 #define threshold 7 //an edit distance threshold value to determine it not has a similiar word NONE word.
 int distance(char *word1,char *word2);//iki kelimenin edit distance ini hesaplayan ve degeri donduren fonksiyon
 int cal_hash(char ***hashtable,char *word);//verilen kelimeyi hashtable da ilgili indise yazan fonksiyon
-int save_hash(char ***hashtable);//oluþturulan hash listesini dosyaya kaydeden fonksiyon
+int save_hash(char ***hashtable);//oluÅŸturulan hash listesini dosyaya kaydeden fonksiyon
 void load_hash(char ***hashtable);//kayitli hash listesini dosyadan okuyan fonksiyon
 int look_hash(char ***hashtable,char *word);//verilen kelimeyi hashtable da arayan bulursa 1 donduren fonksiyon
 int save_changes(FILE **fp,char *word1,char *word2);//2 kelimenin donusumunu dosyaya yazan fonksiyon
@@ -250,7 +250,7 @@ int cal_hash(char ***hashtable,char *word){
     return 0;
 }
 
-//oluþturulan hash listesini dosyaya kaydeden fonksiyon
+//oluÅŸturulan hash listesini dosyaya kaydeden fonksiyon
 int save_hash(char ***hashtable){
     FILE *fp;
     int i;
@@ -278,7 +278,7 @@ void load_hash(char ***hashtable){
         exit(0);
     }
     size_t len;
-    for(i=0;i<hash_size;i++){  //boþluklu yapýdaki hash dosyasýndan okuma yaparken oluþan karakter fazlalýðý hatasýnýýn giderildiði kýsým
+    for(i=0;i<hash_size;i++){  //boÅŸluklu yapÄ±daki hash dosyasÄ±ndan okuma yaparken oluÅŸan karakter fazlalÄ±ÄŸÄ± hatasÄ±nÄ±Ä±n giderildiÄŸi kÄ±sÄ±m
         temp=(char*)malloc(sizeof(char)*50);
         fgets(temp,50,fp);
         len=strlen(temp)-2; //fazlalik olan son 2 karakteri alma
